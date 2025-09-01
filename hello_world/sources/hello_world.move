@@ -15,6 +15,10 @@ module hello_world::hello_world {
         };
         transfer::public_transfer(object, tx_context::sender(ctx));
     }
+
+    public fun hello() : string::String{
+        string::utf8(b"Hello there!")
+    }
 }
 
 

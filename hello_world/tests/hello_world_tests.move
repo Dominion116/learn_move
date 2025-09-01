@@ -1,8 +1,7 @@
-/*
 #[test_only]
 module hello_world::hello_world_tests;
 // uncomment this line to import the module
-// use hello_world::hello_world;
+use hello_world::hello_world;
 
 const ENotImplemented: u64 = 0; 
 
@@ -15,4 +14,3 @@ fun test_hello_world() {
 fun test_hello_world_fail() {
     abort ENotImplemented
 }
-*/
