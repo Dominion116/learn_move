@@ -1,13 +1,14 @@
 #[test_only]
 module hello_world::hello_world_tests;
-// uncomment this line to import the module
+
 use hello_world::hello_world;
+use std::debug;
 
 const ENotImplemented: u64 = 0; 
 
 #[test]
 fun test_hello_world() {
-    // pass
+    debug::print(& hello_world::hello())
 }
 
 #[test, expected_failure(abort_code = ::hello_world::hello_world_tests::ENotImplemented)]
