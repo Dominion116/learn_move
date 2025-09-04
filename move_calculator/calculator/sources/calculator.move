@@ -20,12 +20,16 @@ fun divide(num1: u8, num2: u8): u32 {
     result as u32
 }
 
-public fun answer(num1: u16, num2: u16): u32 {
-    let addition = add(num1, num2);
-    let subtraction = subtract(num1, num2);
-    let division = divide(num1, num2);
-    let multiplication = multiply(num1, num2);
+public fun answer(num1: u16, num2: u16): (u32, u32, u32, u32) {
+    let n1 = (num1 as u8);
+    let n2 = (num2 as u8);
 
-    (addtion, subtraction, division, multiplication as u32)
+    let addition = add(n1, n2);
+    let subtraction = subtract(n1, n2);
+    let division = divide(n1, n2);
+    let multiplication = multiply(n1, n2);
+
+    (addition, subtraction, division, multiplication)
 }
+
 }
