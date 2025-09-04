@@ -1,5 +1,14 @@
 module calculator::calculator{
 
+    use sui::event;
+
+    public struct CalculationResult has copy, drop{
+        addition: u32,
+        subtraction: u32,
+        division: u32,
+        multiplication: u32,
+    }
+
 fun add(num1: u8, num2: u8): u32 {
     let result = num1 + num2;
     result as u32
@@ -29,6 +38,12 @@ public fun answer(num1: u16, num2: u16): (u32, u32, u32, u32) {
     let division = divide(n1, n2);
     let multiplication = multiply(n1, n2);
 
+    event::emit (CalculatorResult {
+        addition,
+        subtraction,
+        division,
+        multiplication,
+    });
     (addition, subtraction, division, multiplication)
 }
 
