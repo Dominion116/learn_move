@@ -1,14 +1,14 @@
-#[test_only]
+// #[test_only]
 
-module calculator::calculator_tests;
+// module calculator::calculator_tests;
 
-use calculator::calculator;
+// use calculator::calculator;
 
-const ENotImplemented: u64 = 0;
+// const ENotImplemented: u64 = 0;
 
-#[test]
-fun test_calculator() {
+// #[test]
+// fun test_calculator() {
     
-}
+// }
 
 
